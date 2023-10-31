@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PokeTeamBuilder</string>
+    <string name="api_baseurl" translatable="false">https://pokeapi.co/api/v2/</string>
+    <string name="default_egg_sprite">https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystery-egg.png</string>
 </resources>
