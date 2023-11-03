@@ -7,16 +7,11 @@ import kotlinx.parcelize.Parcelize
 data class Move(
     val id: Int,
     val name: String,
-    val type: String,
-    val damageClass: String,
-    val accuracy: Int,
-    val power: Int,
-    val pp: Int,
-    val metaData: MetaData
+    val url: String,
 ): Parcelable
 
 @Parcelize
-data class MetaData(
+data class Extra(
     val ailment: String,
     val chance: Int,
     val critRate: Int,

@@ -4,7 +4,7 @@ import android.content.res.Resources
 import com.example.poketeambuilder.R
 import com.example.poketeambuilder.data.model.PokeApiModel
 import com.example.poketeambuilder.data.model.PokeEntity
-import com.example.poketeambuilder.domain.MetaData
+import com.example.poketeambuilder.domain.Extra
 import com.example.poketeambuilder.domain.Move
 import com.example.poketeambuilder.domain.Pokemon
 
@@ -29,17 +29,8 @@ fun PokeApiModel.toPokemon(): Pokemon {
     this.moves.forEach { pokeMoveEntry ->
         val move = Move(
             pokeMoveEntry.id,
-            pokeMoveEntry.name,
-            pokeMoveEntry.type.name,
-            pokeMoveEntry.damageClass,
-            pokeMoveEntry.accuracy,
-            pokeMoveEntry.power,
-            pokeMoveEntry.pp,
-            MetaData(
-                pokeMoveEntry.meta.ailment,
-                pokeMoveEntry.meta.chance,
-                pokeMoveEntry.meta.critRate
-            )
+            pokeMoveEntry.move.name,
+            pokeMoveEntry.move.url
         )
         moveList.add(move)
     }

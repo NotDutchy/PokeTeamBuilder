@@ -1,0 +1,112 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "fbb8c13fd69e0faceae8fdb178ef4cd5",
+    "entities": [
+      {
+        "tableName": "PokeEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `poke_name` TEXT NOT NULL, `poke_image_url` TEXT NOT NULL, `poke_main_type` TEXT NOT NULL, `poke_secondary_type` TEXT, `poke_height` REAL NOT NULL, `poke_weight` REAL NOT NULL, `poke_stat_hp` INTEGER NOT NULL, `poke_stat_att` INTEGER NOT NULL, `poke_stat_def` INTEGER NOT NULL, `poke_stat_sp_att` INTEGER NOT NULL, `poke_stat_sp_def` INTEGER NOT NULL, `poke_stat_spd` INTEGER NOT NULL, `moves` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeName",
+            "columnName": "poke_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeImageUrl",
+            "columnName": "poke_image_url",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeMainType",
+            "columnName": "poke_main_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeSecondaryType",
+            "columnName": "poke_secondary_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pokeHeight",
+            "columnName": "poke_height",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeWeight",
+            "columnName": "poke_weight",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeStatHp",
+            "columnName": "poke_stat_hp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeStatAtt",
+            "columnName": "poke_stat_att",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeStatDef",
+            "columnName": "poke_stat_def",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeStatSpAtt",
+            "columnName": "poke_stat_sp_att",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeStatSpDef",
+            "columnName": "poke_stat_sp_def",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pokeStatSpd",
+            "columnName": "poke_stat_spd",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "moves",
+            "columnName": "moves",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'fbb8c13fd69e0faceae8fdb178ef4cd5')"
+    ]
+  }
+}

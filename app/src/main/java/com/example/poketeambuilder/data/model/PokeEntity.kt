@@ -20,5 +20,5 @@ data class PokeEntity(
     @ColumnInfo(name = "poke_stat_sp_att") val pokeStatSpAtt: Int,
     @ColumnInfo(name = "poke_stat_sp_def") val pokeStatSpDef: Int,
     @ColumnInfo(name = "poke_stat_spd") val pokeStatSpd: Int,
-    val moves: List<Move>
+    @ColumnInfo(name = "moves") val moves: List<Move>
 )

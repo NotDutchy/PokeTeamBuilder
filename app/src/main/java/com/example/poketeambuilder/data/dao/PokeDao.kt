@@ -24,8 +24,8 @@ interface PokeDao {
     @Query("SELECT COUNT(poke_name) FROM pokeentity")
     fun getDatabaseSize(): Int
 
-    @Query("SELECT moves FROM pokeentity WHERE id LIKE :id")
-    fun getPokeMoves(id: Int): List<Move>
+    @Query("SELECT moves FROM pokeentity WHERE id = :pokeId")
+    fun getPokeMoves(pokeId: Int): List<Move>
 
     @RawQuery
     fun getFilteredPokemons(query: SimpleSQLiteQuery): List<PokeEntity>

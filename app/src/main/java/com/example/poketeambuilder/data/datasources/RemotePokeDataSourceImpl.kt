@@ -1,6 +1,7 @@
 package com.example.poketeambuilder.data.datasources
 
 import android.content.Context
+import android.util.Log
 import com.example.poketeambuilder.R
 import com.example.poketeambuilder.data.network.PokeApiService
 import com.example.poketeambuilder.data.toPokemon
@@ -15,6 +16,7 @@ class RemotePokeDataSourceImpl @Inject constructor(
 
     private suspend fun getPokeWithIdFromApi(pokeId: Int): Pokemon {
         val response = pokeApiService.GetPokemonFromApi(id = pokeId)
+        Log.w("RESPONSE", response.body().toString())
         return response.body()?.toPokemon() ?: throw Exception()
     }
 

@@ -5,8 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class PokeApiModel(
     val name: String,
     val id: Int,
-    val type: String,
-    val moves: List<MoveEntryApiModel>,
+    val moves: List<PokeMoveEntryApiModel>,
     val types: List<PokeTypeEntryApiModel>,
     val sprites: PokeSpriteApiModel,
     val height: Double,
