@@ -34,4 +34,6 @@
     <color name="color_stat_sp_atk">#FF6890F0</color>
     <color name="color_stat_sp_def">#FF78C850</color>
     <color name="color_stat_spd">#FFF85888</color>
+
+    <color name="color_background">#FF2B292C</color>
 </resources>

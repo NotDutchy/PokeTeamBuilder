@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material3.CardColors
@@ -40,7 +41,7 @@ fun PokeCard(
         ),
         modifier = modifier.fillMaxSize().clickable {
             onClick.invoke()
-        }
+        }.padding(6.dp, 6.dp)
 
     ) {
         Column(
