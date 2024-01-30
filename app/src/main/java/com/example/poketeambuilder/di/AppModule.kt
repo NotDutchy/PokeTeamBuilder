@@ -14,6 +14,7 @@ import com.example.poketeambuilder.data.repos.PokeRepository
 import com.example.poketeambuilder.data.repos.PokeRepositoryImpl
 import com.example.poketeambuilder.domain.usecases.GetAllPokeUseCase
 import com.example.poketeambuilder.domain.usecases.GetFilteredPokeUseCase
+import com.example.poketeambuilder.ui.viewmodels.DetailedPokeCardViewModel
 import com.example.poketeambuilder.ui.viewmodels.PokeDexViewModel
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -81,4 +82,8 @@ object AppModule {
     @Provides
     @Singleton
     fun providePokeDexViewModel(getAllUseCase: GetAllPokeUseCase, getFilteredUseCase: GetFilteredPokeUseCase): PokeDexViewModel = PokeDexViewModel(getAllUseCase, getFilteredUseCase)
+
+    @Provides
+    @Singleton
+    fun provideDetailedPokeCardViewmodel(): DetailedPokeCardViewModel = DetailedPokeCardViewModel()
 }

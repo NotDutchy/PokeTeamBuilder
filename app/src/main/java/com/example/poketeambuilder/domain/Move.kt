@@ -11,7 +11,7 @@ data class Move(
 ): Parcelable
 
 @Parcelize
-data class Extra(
+data class MoveStats(
     val ailment: String,
     val chance: Int,
     val critRate: Int,

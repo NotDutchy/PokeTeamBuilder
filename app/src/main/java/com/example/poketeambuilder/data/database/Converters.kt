@@ -1,8 +1,8 @@
 package com.example.poketeambuilder.data.database
 
 import androidx.room.TypeConverter
-import com.example.poketeambuilder.domain.Extra
 import com.example.poketeambuilder.domain.Move
+import com.example.poketeambuilder.domain.MoveStats
 import com.google.gson.Gson
 
 class Converters {
@@ -31,14 +31,14 @@ class Converters {
     }
 
     @TypeConverter
-    fun fromExtra(value: Extra): String {
+    fun fromExtra(value: MoveStats): String {
         var gson = Gson()
         return gson.toJson(value)
     }
 
     @TypeConverter
-    fun fromStringToExtra(value: String): Extra {
+    fun fromStringToExtra(value: String): MoveStats {
         var gson = Gson()
-        return gson.fromJson(value, Extra::class.java)
+        return gson.fromJson(value, MoveStats::class.java)
     }
 }

@@ -4,7 +4,6 @@ import android.content.res.Resources
 import com.example.poketeambuilder.R
 import com.example.poketeambuilder.data.model.PokeApiModel
 import com.example.poketeambuilder.data.model.PokeEntity
-import com.example.poketeambuilder.domain.Extra
 import com.example.poketeambuilder.domain.Move
 import com.example.poketeambuilder.domain.Pokemon
 

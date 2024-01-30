@@ -24,24 +24,36 @@ import androidx.compose.material3.Icon
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
+import com.example.poketeambuilder.domain.Move
+import com.example.poketeambuilder.domain.MoveStats
 import com.example.poketeambuilder.domain.Pokemon
 import com.example.poketeambuilder.domain.TypeColorHelper
+import com.example.poketeambuilder.ui.viewmodels.DetailedPokeCardViewModel
 import com.ramcosta.composedestinations.annotation.Destination
 
 @Composable
 @Destination
 fun DetailedPokeCard(
+    viewModel: DetailedPokeCardViewModel = hiltViewModel(),
     poke: Pokemon,
     navigator: NavController
 ) {
+
+/*    LaunchedEffect(true) {
+        viewModel.currentPoke.
+    }*/
 
     Column(
         modifier = Modifier.fillMaxSize()
@@ -177,4 +189,9 @@ fun StatRow(statName: String, value: Int) {
         Spacer(modifier = Modifier.width(4.dp))
         Text(text = "$value", modifier = Modifier.fillMaxWidth(0.4f))
     }
+}
+
+@Composable
+fun MoveRow() {
+
 }
